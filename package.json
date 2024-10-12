@@ -1,0 +1,25 @@
+{
+  "name": "backend-node-prisma",
+  "version": "1.0.0",
+  "description": "Backend com Node.js e Prisma",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "build": "tsc",
+    "dev": "ts-node src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^4.x.x",
+    "express": "^4.x.x"
+  },
+  "devDependencies": {
+    "@types/express": "^4.x.x",
+    "@types/node": "^18.x.x",
+    "prisma": "^4.x.x",
+    "ts-node": "^10.x.x",
+    "typescript": "^4.x.x"
+  }
+}
