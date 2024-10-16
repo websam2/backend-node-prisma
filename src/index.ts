@@ -4,7 +4,10 @@ import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 const app = express();
 
-app.use(express.json());
+app.use((req, res, next) => {
+  res.header('Set-Cookie', '__vercel_live_token=; SameSite=None; Secure');
+  next();
+});
 
 app.get('/', (req, res) => {
   res.json({ message: 'Seja bem-vindo ao backend de Node com Prisma' });
